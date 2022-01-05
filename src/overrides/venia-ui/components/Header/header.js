@@ -13,12 +13,15 @@ import resourceUrl from '@magento/peregrine/lib/util/makeUrl';
 
 import { useStyle } from '@magento/venia-ui/lib/classify';
 import defaultClasses from '@magento/venia-ui/lib/components/Header/header.css';
-import PageLoadingIndicator from '@magento/venia-ui/lib/components/PageLoadingIndicator';
 import StoreSwitcher from '@magento/venia-ui/lib/components/Header/storeSwitcher';
 import CurrencySwitcher from '@magento/venia-ui/lib/components/Header/currencySwitcher';
 import MegaMenu from '@magento/venia-ui/lib/components/MegaMenu';
+import WishListTrigger from 'src/components/WishListTrigger/WishListTrigger';
+import TopBar from 'src/components/TopBar/TopBar.js';
 
-const SearchBar = React.lazy(() => import('@magento/venia-ui/lib/components/SearchBar'));
+const SearchBar = React.lazy(() =>
+    import('@magento/venia-ui/lib/components/SearchBar')
+);
 
 const Header = props => {
     const {
@@ -47,24 +50,21 @@ const Header = props => {
             </Route>
         </Suspense>
     ) : null;
-    const pageLoadingIndicator = isPageLoading ? (
-        <PageLoadingIndicator />
-    ) : null;
 
     return (
         <Fragment>
-            <div className={classes.switchersContainer}>
-                <div className={classes.switchers}>
-                    <StoreSwitcher />
-                    <CurrencySwitcher />
-                </div>
-            </div>
             <header className={rootClass}>
+                <TopBar />
+                <div className={classes.switchersContainer}>
+                    <div className={classes.switchers}>
+                        <StoreSwitcher />
+                        <CurrencySwitcher />
+                    </div>
+                </div>
                 <div className={classes.toolbar}>
                     <div className={classes.primaryActions}>
                         <NavTrigger />
                     </div>
-                    {pageLoadingIndicator}
                     <OnlineIndicator
                         hasBeenOffline={hasBeenOffline}
                         isOnline={isOnline}
@@ -75,14 +75,17 @@ const Header = props => {
                     >
                         <Logo classes={{ logo: classes.logo }} />
                     </Link>
-                    <MegaMenu />
                     <div className={classes.secondaryActions}>
                         <SearchTrigger
                             onClick={handleSearchTriggerClick}
                             ref={searchTriggerRef}
                         />
                         <AccountTrigger />
+                        <WishListTrigger />
                         <CartTrigger />
+                    </div>
+                    <div className={classes.megaMenuDiv}>
+                    <MegaMenu />
                     </div>
                 </div>
                 {searchBar}

@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+.barClass {
+    background-color: rgb(24,28,36);
+    position: sticky;
+    position: -webkit-sticky;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: white;
+    top: 0;
+    z-index: 12;
+    width: 100%;
+} 
+
+.barText {
+    margin-right: 10px;
+}
+
+.linkText {
+    text-decoration: underline;
+}
+
+.textClass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonClass {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.barButton {
+    position: absolute; 
+    top: 55%; 
+    right: 20px; 
+    transform: translateY(-50%); /* trick to make the button to go up by 50% of its proper height, so it will be perfectly vertically centered*/
+    background-color: rgb(24,28,36) ;
+    color: white;
+    border: none;
+}
+
+.barButton svg {
+    stroke:white;
+}
