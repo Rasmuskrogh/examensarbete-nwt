@@ -12,8 +12,7 @@
 }
 
 .trigger {
-/*     composes: root from '@magento/venia-ui/lib/components/clickable.css'; */
-
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
     height: 2.6rem;
     min-width: 1rem;
     z-index: 1;

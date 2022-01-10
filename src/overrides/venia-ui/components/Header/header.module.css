@@ -62,7 +62,7 @@
     .toolbar {
         grid-template-areas: 'primary title secondary';
         grid-template-columns: auto auto 1fr;
-        min-height: var(--venia-global-header-minHeight);
+        height: 5rem;
         padding: 0 1rem;
     }
 }

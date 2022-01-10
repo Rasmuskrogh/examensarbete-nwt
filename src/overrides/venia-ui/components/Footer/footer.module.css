@@ -55,8 +55,8 @@
     font-size: var(--venia-typography-body-S-fontSize);
     justify-self: center;
     line-height: var(--venia-global-lineHeight-300);
-    max-width: 16rem;
-    min-width: 12rem;
+    max-width: 35rem;
+    min-width: 35rem;
 }
 
 @media (max-width: 960px) {
@@ -138,3 +138,36 @@
         margin-top: 2.5rem;
     }
 }
+
+.footer_submit {
+    background-color: rgb(83,89,101);
+    color: white;
+    height:40px;
+    width: 130px;
+    font-size: 12px;
+}
+
+.footer_input {
+    background-color: rgb(245,245,245);
+    height: 40px;
+    width: 245px;
+    margin-right: 10px;
+    border: none;
+    box-shadow: 0 1px rgb(138,141,148);
+}
+
+.footer_checkText {
+    margin-top: 15px;
+    display: flex;
+}
+
+.newsletterSubmit {
+    margin-top: 15px;
+}
+
+.footer_checkText > input {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+

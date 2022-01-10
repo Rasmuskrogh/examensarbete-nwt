@@ -7,7 +7,7 @@ import { useCartTrigger } from '@magento/peregrine/lib/talons/Header/useCartTrig
 
 import { useStyle } from '@magento/venia-ui/lib/classify';
 import Icon from '@magento/venia-ui/lib/components/Icon';
-import defaultClasses from '@magento/venia-ui/lib/components/Header/cartTrigger.css';
+import defaultClasses from '@magento/venia-ui/lib/components/Header/cartTrigger.module.css';
 import { GET_ITEM_COUNT_QUERY } from '@magento/venia-ui/lib/components/Header/cartTrigger.gql';
 
 const MiniCart = React.lazy(() => import('@magento/venia-ui/lib/components/MiniCart'));

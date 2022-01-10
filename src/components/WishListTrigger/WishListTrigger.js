@@ -6,7 +6,7 @@ import { useUserContext } from '@magento/peregrine/lib/context/user';
 import { useToasts } from '@magento/peregrine';
 import { useHistory } from 'react-router-dom';
 import { useStyle } from '@magento/venia-ui/lib/classify';
-import defaultClasses from './WishListTrigger.css';
+import defaultClasses from './WishListTrigger.module.css';
 
 const WishListTrigger = () => {
     const classes = useStyle(defaultClasses);

@@ -7,7 +7,7 @@ import { useStyle } from '@magento/venia-ui/lib/classify';
 
 import AccountChip from '@magento/venia-ui/lib/components/AccountChip';
 
-import defaultClasses from '@magento/venia-ui/lib/components/Header/accountTrigger.css';
+import defaultClasses from '@magento/venia-ui/lib/components/Header/accountTrigger.module.css';
 
 const AccountMenu = React.lazy(() => import('@magento/venia-ui/lib/components/AccountMenu'));
 

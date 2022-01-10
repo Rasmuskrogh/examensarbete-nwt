@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {Link} from  "react-router-dom"
 import { useStyle } from '@magento/venia-ui/lib/classify';
 import Icon from '@magento/venia-ui/lib/components/Icon';
-import defaultClasses from "./TopBar.css"
+import defaultClasses from "./TopBar.module.css"
 import {X} from "react-feather"; 
 
 

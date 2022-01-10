@@ -7,7 +7,7 @@ import { useFooter } from '@magento/peregrine/lib/talons/Footer/useFooter';
 
 import Logo from '@magento/venia-ui/lib/components/Logo';
 import { useStyle } from '@magento/venia-ui/lib/classify';
-import defaultClasses from '@magento/venia-ui/lib/components/Footer/footer.css';
+import defaultClasses from '@magento/venia-ui/lib/components/Footer/footer.module.css';
 import { DEFAULT_LINKS, LOREM_IPSUM } from '@magento/venia-ui/lib/components/Footer/sampleData';
 
 const Footer = props => {
@@ -50,16 +50,20 @@ const Footer = props => {
                 {linkGroups}
                 <div className={classes.callout}>
                     <h3 className={classes.calloutHeading}>
-                        <FormattedMessage
-                            id={'footer.followText'}
-                            defaultMessage={'Follow USA!'}
-                        />
+                    <span>NYHETERSBREV</span>
                     </h3>
                     <p className={classes.calloutBody}>
-                        <FormattedMessage
-                            id={'footer.calloutText'}
-                            defaultMessage={LOREM_IPSUM}
-                        />
+                        <span>Prenumerera på vårt nyhetsbrev & ta del av våra nyheter.</span>
+                        <form>
+                            <div className={classes.newsletterSubmit}>
+                                <input type="text" placeholder='abc@xyz.com' className={classes.footer_input} />
+                                <button type="submit" className={classes.footer_submit}>PRENUMERERA</button> <br/>
+                            </div>
+                            <div className={classes.footer_checkText}>
+                                <input type="checkbox" />
+                                <label >Jag godkänner Superfronts <u>Integritetspolicy</u></label>
+                            </div>    
+                        </form>
                     </p>
                     <ul className={classes.socialLinks}>
                         <li>

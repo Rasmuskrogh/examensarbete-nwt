@@ -6,7 +6,7 @@ import { useIntl } from 'react-intl';
 import Icon from '@magento/venia-ui/lib/components/Icon';
 
 import { useStyle } from '@magento/venia-ui/lib/classify';
-import defaultClasses from '@magento/venia-ui/lib/components/Header/searchTrigger.css';
+import defaultClasses from '@magento/venia-ui/lib/components/Header/searchTrigger.module.css';
 import { useSearchTrigger } from '@magento/peregrine/lib/talons/Header/useSearchTrigger';
 
 const SearchTrigger = React.forwardRef((props, ref) => {
