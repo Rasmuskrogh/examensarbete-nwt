@@ -12,7 +12,7 @@
     max-width: var(--venia-global-maxWidth);
     min-height: 15rem;
     padding-top: 4rem;
-    row-gap: 4rem;
+    row-gap: 1rem;
     width: 100%;
 }
 
@@ -84,14 +84,13 @@
 
 .branding {
     align-items: center;
-    border-top: 2px solid rgb(var(--venia-global-color-gray-100));
-    display: grid;
+   /*  display: grid;
     grid-area: brand;
     grid-auto-flow: column;
     grid-template-areas: 'a b c';
-    grid-template-columns: minmax(200px, 1fr) auto minmax(200px, 1fr);
+    grid-template-columns: minmax(200px, 1fr) auto minmax(200px, 1fr); */
     height: 4rem;
-    justify-self: center;
+ /*    justify-self: center; */
     padding: 0 1.5rem;
     width: 100%;
 }
@@ -109,35 +108,9 @@
     }
 }
 
-.legal {
-    align-items: center;
-    display: grid;
-    gap: 1rem;
-    grid-area: c;
-    grid-auto-flow: column;
-    justify-content: end;
-}
-
-@media (max-width: 960px) {
-    .legal {
-        justify-content: center;
-    }
-}
-
 .copyright {
-    grid-area: b;
-    text-align: center;
 }
 
-.logo {
-    grid-area: a;
-}
-
-@media (max-width: 960px) {
-    .logo {
-        margin-top: 2.5rem;
-    }
-}
 
 .footer_submit {
     background-color: rgb(83,89,101);

@@ -75,15 +75,17 @@ const Header = props => {
                     >
                         <Logo classes={{ logo: classes.logo }} />
                     </Link>
-                    <div className={classes.secondaryActions}>
-                        <SearchTrigger
-                            onClick={handleSearchTriggerClick}
-                            ref={searchTriggerRef}
-                        />
-                        <AccountTrigger />
-                        <WishListTrigger />
-                        <CartTrigger />
-                    </div>
+                    {/* <div Classname={classes.secondaryActionsContainer}> */}
+                        <div className={classes.secondaryActions}>
+                            <SearchTrigger
+                                onClick={handleSearchTriggerClick}
+                                ref={searchTriggerRef}
+                            />
+                            <AccountTrigger />
+                            <WishListTrigger />
+                            <CartTrigger />
+                        </div>
+                    {/* </div> */}
                     <div className={classes.megaMenuDiv}>
                     <MegaMenu />
                     </div>

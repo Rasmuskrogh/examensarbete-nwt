@@ -4,8 +4,6 @@ import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { shape, string } from 'prop-types';
 import { useFooter } from '@magento/peregrine/lib/talons/Footer/useFooter';
-
-import Logo from '@magento/venia-ui/lib/components/Logo';
 import { useStyle } from '@magento/venia-ui/lib/classify';
 import defaultClasses from '@magento/venia-ui/lib/components/Footer/footer.module.css';
 import { DEFAULT_LINKS, LOREM_IPSUM } from '@magento/venia-ui/lib/components/Footer/sampleData';
@@ -15,7 +13,7 @@ const Footer = props => {
     const classes = useStyle(defaultClasses, props.classes);
     const talonProps = useFooter();
 
-    const { copyrightText } = talonProps;
+    /* const { copyrightText } = talonProps; */
 
     const linkGroups = Array.from(links, ([groupKey, linkProps]) => {
         const linkElements = Array.from(linkProps, ([text, path]) => {
@@ -47,13 +45,13 @@ const Footer = props => {
     return (
         <footer className={classes.root}>
             <div className={classes.links}>
-                {linkGroups}
+                {linkGroups} 
                 <div className={classes.callout}>
                     <h3 className={classes.calloutHeading}>
                     <span>NYHETERSBREV</span>
                     </h3>
-                    <p className={classes.calloutBody}>
-                        <span>Prenumerera på vårt nyhetsbrev & ta del av våra nyheter.</span>
+                    <div className={classes.calloutBody}>
+                        <span>Prenumerera på vårt nyhetsbrev &amp; ta del av våra nyheter.</span>
                         <form>
                             <div className={classes.newsletterSubmit}>
                                 <input type="text" placeholder='abc@xyz.com' className={classes.footer_input} />
@@ -64,7 +62,7 @@ const Footer = props => {
                                 <label >Jag godkänner Superfronts <u>Integritetspolicy</u></label>
                             </div>    
                         </form>
-                    </p>
+                    </div>
                     <ul className={classes.socialLinks}>
                         <li>
                             <Instagram size={20} />
@@ -79,24 +77,7 @@ const Footer = props => {
                 </div>
             </div>
             <div className={classes.branding}>
-                <ul className={classes.legal}>
-                    <li className={classes.terms}>
-                        <FormattedMessage
-                            id={'footer.termsText'}
-                            defaultMessage={'Terms of Use'}
-                        />
-                    </li>
-                    <li className={classes.privacy}>
-                        <FormattedMessage
-                            id={'footer.privacyText'}
-                            defaultMessage={'Privacy Policy'}
-                        />
-                    </li>
-                </ul>
-                <p className={classes.copyright}>{copyrightText || null}</p>
-                <Link className={classes.logo} to="/">
-                    <Logo />
-                </Link>
+                <p className={classes.copyright}>© 2021 Superfront</p>
             </div>
         </footer>
     );
