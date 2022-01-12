@@ -3,8 +3,6 @@
     box-shadow: 0 2px rgb(var(--venia-global-color-gray-100));
     display: flex;
     flex-direction: column;
-    /* grid-auto-columns: 100%;
-    justify-items: center; */
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -27,14 +25,7 @@
 
 .toolbar {
     z-index: 3;
-    /* align-content: center;
-    align-items: center; */
     display: flex;
-
-    /* grid-template-areas: 'primary title secondary';
-    grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: 3rem;
-    justify-items: center; */
     padding: 0 0.5rem;
     width: 100%;
 }
@@ -67,13 +58,16 @@
     }
 }
 
-.logoContainer {
-    align-self: flex-start;
-    display: flex;
-    justify-content: center;
-    position: absolute;
+.logoAndSecondaryActionsContainer {
     width: 100%;
-    z-index: 19;
+    display: flex;
+    flex-direction: column;
+}
+
+.logoContainer {
+    align-self: center;
+    position: absolute;
+    z-index: 20;
 }
 
 .logo {
@@ -95,18 +89,10 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    width: 100%;
-    z-index: 20;
+    z-index: 19;
     position: relative;
+    
 }
-/* 
-.secondaryActionsContainer {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    position: absolute;
-
-} */
 
 .megaMenuDiv {
     align-self: flex-end;
@@ -115,17 +101,6 @@
     justify-content: center;
     position: absolute;
 
-}
-
-@media (min-width: 641px) {
-    /* .logoContainer {
-        grid-column: 2/ 3;
-        grid-row: 1 / 1;
-    } */
-/* 
-    .secondaryActions {
-        column-gap: 1rem;
-    } */
 }
 
 .searchFallback {
@@ -178,22 +153,6 @@
     color: rgb(var(--venia-global-color-gray-darker));
     left: 3.5em;
 }
-
-/* @media (min-width: 1024px) {
-    .logoContainer {
-        grid-column: 1 / 2;
-        grid-row: 1 / 1;
-    }
-
-    .secondaryActions {
-        grid-column: 4 / 5;
-        grid-row: 1 / 1;
-    }
-
-    .toolbar {
-        grid-template-columns: 0.5fr 0.5fr 3fr 1fr;
-    }
-} */
 
 @keyframes pulse {
     0%,

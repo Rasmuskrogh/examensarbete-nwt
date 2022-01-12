@@ -69,13 +69,13 @@ const Header = props => {
                         hasBeenOffline={hasBeenOffline}
                         isOnline={isOnline}
                     />
-                    <Link
-                        to={resourceUrl('/')}
-                        className={classes.logoContainer}
-                    >
-                        <Logo classes={{ logo: classes.logo }} />
-                    </Link>
-                    {/* <div Classname={classes.secondaryActionsContainer}> */}
+                    <div className={classes.logoAndSecondaryActionsContainer}>
+                        <Link
+                            to={resourceUrl('/')}
+                            className={classes.logoContainer}
+                        >
+                            <Logo classes={{ logo: classes.logo }} />
+                        </Link>
                         <div className={classes.secondaryActions}>
                             <SearchTrigger
                                 onClick={handleSearchTriggerClick}
@@ -85,9 +85,9 @@ const Header = props => {
                             <WishListTrigger />
                             <CartTrigger />
                         </div>
-                    {/* </div> */}
+                    </div>
                     <div className={classes.megaMenuDiv}>
-                    <MegaMenu />
+                        <MegaMenu />
                     </div>
                 </div>
                 {searchBar}
