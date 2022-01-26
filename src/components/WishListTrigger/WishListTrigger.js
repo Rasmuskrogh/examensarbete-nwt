@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Heart, AlertCircle } from 'react-feather';
 import { Link } from 'react-router-dom';
 import Icon from '@magento/venia-ui/lib/components/Icon';
@@ -7,6 +7,8 @@ import { useToasts } from '@magento/peregrine';
 import { useHistory } from 'react-router-dom';
 import { useStyle } from '@magento/venia-ui/lib/classify';
 import defaultClasses from './WishListTrigger.module.css';
+
+//An Icon on the header leading to the wishlist. Shows a toast that you need to login to access that page with a link to the log in page.
 
 const WishListTrigger = () => {
     const classes = useStyle(defaultClasses);

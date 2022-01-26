@@ -1,3 +1,5 @@
+//Most info in the footer comes from here
+
 const tjänsterLinks = new Map()
     .set('TRÄ- & FÄRGPROVER', null)
     .set('ARKITEKTHJÄLPEN', null)
@@ -12,10 +14,10 @@ const kundserviceLinks = new Map()
     .set('LEVERANSER & RETURER', null)
     .set('BUTIK & SHOWROOM', null)
     .set('KÖPVILLKOR', null)
-    .set("FRÅGOR & SVAR", null)
-    .set("INTEGRITETSPOLICY", null)
-    .set("ALLMÄNA VILLKOR", null)
-    .set("COOKIES", null);
+    .set('FRÅGOR & SVAR', null)
+    .set('INTEGRITETSPOLICY', null)
+    .set('ALLMÄNA VILLKOR', null)
+    .set('COOKIES', null);
 
 const guiderLinks = new Map()
     .set('OM IKEAS STOMMAR', null)
@@ -23,21 +25,21 @@ const guiderLinks = new Map()
     .set('BYGGA KÖK', null)
     .set('SÅ FUNKAR DET', null)
     .set('SKÖTSEL', null)
-    .set("PRISEXEMPEL", null)
-    .set("INNAN DU HANDLAR", null);
+    .set('PRISEXEMPEL', null)
+    .set('INNAN DU HANDLAR', null);
 
 const superfrontLinks = new Map()
-    .set("OM SUPERFRONT", null)
-    .set("VÅR VISION", null)
-    .set("NYHETER", null)
-    .set("PRESS", null)
-    .set("KARRIÄR", null)
+    .set('OM SUPERFRONT', null)
+    .set('VÅR VISION', null)
+    .set('NYHETER', null)
+    .set('PRESS', null)
+    .set('KARRIÄR', null);
 
 export const DEFAULT_LINKS = new Map()
     .set('TJÄNSTER', tjänsterLinks)
     .set('KUNDSERVICE', kundserviceLinks)
     .set('GUIDER', guiderLinks)
-    .set("SUPERFRONT", superfrontLinks);
+    .set('SUPERFRONT', superfrontLinks);
 
 export const LOREM_IPSUM =
     'Prenumerera på vårt nyhetsbrev & ta del av våra nyheter.';
