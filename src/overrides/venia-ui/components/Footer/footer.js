@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Facebook, Instagram, Twitter } from 'react-feather';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
@@ -12,6 +12,16 @@ import {
 } from '@magento/venia-ui/lib/components/Footer/sampleData';
 
 const Footer = props => {
+    const [width, setWidth] = useState(window.innerWidth);
+    const breakPoint = 450;
+
+    useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => window.removeEventListener('resize', handleWindowResize);
+    }, []);
+
     const { links } = props;
     const classes = useStyle(defaultClasses, props.classes);
     const talonProps = useFooter();
@@ -52,10 +62,17 @@ const Footer = props => {
                         <span>NYHETERSBREV</span>
                     </h3>
                     <div className={classes.calloutBody}>
-                        <span>
-                            Prenumerera på vårt nyhetsbrev &amp; ta del av våra
-                            nyheter.
-                        </span>
+                        {width > breakPoint ? (
+                            <span>
+                                Prenumerera på vårt nyhetsbrev &amp; ta del av
+                                våra nyheter.
+                            </span>
+                        ) : (
+                            <span>
+                                Prenumerera på vårt nyhetsbrev <br /> &amp; ta
+                                del av våra nyheter.
+                            </span>
+                        )}
                         <form>
                             <div className={classes.newsletterSubmit}>
                                 <input
@@ -63,6 +80,7 @@ const Footer = props => {
                                     placeholder="abc@xyz.com"
                                     className={classes.footer_input}
                                 />
+                                {width > breakPoint ? '' : <br />}
                                 <button
                                     type="submit"
                                     className={classes.footer_submit}
@@ -73,10 +91,17 @@ const Footer = props => {
                             </div>
                             <div className={classes.footer_checkText}>
                                 <input type="checkbox" />
-                                <label>
-                                    Jag godkänner Superfronts{' '}
-                                    <u>Integritetspolicy</u>
-                                </label>
+                                {width > breakPoint ? (
+                                    <label>
+                                        Jag godkänner Superfronts{' '}
+                                        <u>Integritetspolicy</u>
+                                    </label>
+                                ) : (
+                                    <label>
+                                        Jag godkänner Superfronts <br />
+                                        <u>Integritetspolicy</u>
+                                    </label>
+                                )}
                             </div>
                         </form>
                     </div>

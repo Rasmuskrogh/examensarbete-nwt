@@ -25,8 +25,16 @@
     margin-bottom: -115%;
 }
 
+.textRowOneHomepage > p > a {
+    text-decoration: none;
+}
+
 .textRowTwoHomepage {
     margin-bottom: -57%;
+}
+
+.textRowTwoHomepage > p > a {
+    text-decoration: none;
 }
 
 .textOneHomepage {
@@ -52,6 +60,10 @@
 
 .rowFourHomepage {
     margin: 100px 0;
+}
+
+.rowBottomMargin {
+    margin-bottom: 100px;
 }
 
 /* Wood Collection X Japandi */
@@ -96,4 +108,16 @@
 .colorTextCircus {
     margin-left: 5%;
     margin-right: 5%;
+}
+
+@media (max-width: 1240px) {
+    .textOneCircus {
+        margin: 0 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .textOneCircus {
+        margin: 0 50px;
+    }
 }
